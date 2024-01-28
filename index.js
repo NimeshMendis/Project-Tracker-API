@@ -5,9 +5,7 @@ const dotenv = require("dotenv").config();
 // const port = process.env.PORT;
 const port = 5001;
 
-app.get('/api/contacts', (req,res) => {
-    res.send("Get all contacts!");
-})
+app.use("/api/contacts", require("./routes/contactRoutes"));
 
 app.listen(port, () => {
     console.log("Server running on " + port);
