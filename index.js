@@ -9,7 +9,7 @@ const app = express();
 const port = 5001;
 
 app.use(express.json());
-app.use("/api/employees", require("./routes/employeeRoutes"));
+app.use("/api/projects", require("./routes/projectRoutes"));
 app.use(errorHandler)
 
 app.listen(port, () => {
